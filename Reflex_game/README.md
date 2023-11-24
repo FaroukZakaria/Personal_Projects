@@ -1,0 +1,1 @@
+Still managing to implement FOULS. Trying to manage how to let program continue execution despite waiting for an input.
