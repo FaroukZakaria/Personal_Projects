@@ -97,8 +97,10 @@ def main():
             print(f"Release Year: {clean_year}")
             print(f"Tags are: {clean_Tags}")
             print("\n\n---------\n\n")
-        except:
-            print("ERROR MODIFYING FILE\n\n---------\n\n")
+        except Exception as e:
+            print("ERROR MODIFYING FILE\n")
+            print(e)
+            print("\n---------\n")
             continue
 
 Input = input("Enter 1 if you want to know the files to be printed to be displayed first, ignore for otherwise: ")
