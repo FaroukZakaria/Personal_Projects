@@ -1,6 +1,6 @@
 def get_latest():
     try:
-        with open('tasks.txt', 'r') as file:
+        with open('Todo_list/tasks.txt', 'r') as file:
             num = 0
             for line in file:
                 try:
@@ -15,7 +15,7 @@ def get_latest():
 def todo_add(task_title, task_due_date=None):
     latest_number = get_latest()
     # Append the new task
-    with open('tasks.txt', 'a') as file:
+    with open('Todo_list/tasks.txt', 'a') as file:
         next_number = latest_number + 1
         file.write(f"{next_number}. {task_title}")
         if task_due_date:
