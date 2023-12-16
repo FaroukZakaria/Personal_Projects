@@ -1,17 +1,19 @@
-def todo_add(task_title, task_due_date=None):
+def get_latest():
     try:
         with open('tasks.txt', 'r') as file:
-            latest_number = 0
+            num = 0
             for line in file:
                 try:
                     current_number = int(line.split('.')[0])
                 except ValueError:
                     continue
-                latest_number = max(current_number, latest_number)
+                num = max(current_number, num)
     except FileNotFoundError:
         # If the file doesn't exist yet, set latest_number to 0
-        latest_number = 0
-
+        num = 0
+    return num
+def todo_add(task_title, task_due_date=None):
+    latest_number = get_latest()
     # Append the new task
     with open('tasks.txt', 'a') as file:
         next_number = latest_number + 1
