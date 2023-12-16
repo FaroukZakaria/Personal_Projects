@@ -15,9 +15,11 @@ while True:
               """)
         continue
 
-    elif (interpreter == 'exit' or
-    interpreter == 'quit' or
-    interpreter == 'q'):
+    elif (
+        interpreter == 'exit' or
+        interpreter == 'quit' or
+        interpreter == 'q'
+        ):
         print("Bye")
         break
 
@@ -25,7 +27,7 @@ while True:
     elif interpreter == '1':
         title = input("Enter the title of task: ")
         due_date = input("Enter the due date (ignore for none): ")
-        # add(title, due_date=None)
+        add(title, due_date)
     
     elif interpreter == '2':
         #view()
