@@ -1,7 +1,7 @@
-"""import todo_list
+add = __import__('todo_list').todo_add
 complete = __import__('todo_list').todo_complete
 view = __import__('todo_list').todo_view
-remove = __import__('todo_list').todo_remove"""
+remove = __import__('todo_list').todo_remove
 
 print("(h for help)")
 while True:
@@ -17,8 +17,7 @@ while True:
 
     elif (interpreter == 'exit' or
     interpreter == 'quit' or
-    interpreter == 'q' or
-    KeyboardInterrupt):
+    interpreter == 'q'):
         print("Bye")
         break
 
